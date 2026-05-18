@@ -71,3 +71,27 @@ export default defineConfig([
   },
 ])
 ```
+איפה השתמשתי ב AI :
+*עיצוב
+מבנה כללי (App.tsx)
+רקע בהיר (slate-50) לכל האתר
+תוכן ממורכז עם ריווח נוח (max-w-7xl, padding)
+Sidebar משמאל + אזור תוכן מימין (אותו layout כמו קודם)
+Sidebar
+רקע כהה (slate-900) עם צל
+כותרת "My Shelf" + תווית "Book Library"
+NavLink — הדף הפעיל מודגש ב-indigo, שאר הקישורים עם hover
+אותם 3 קישורים: All Books, Add Book, Search Book
+All Books
+כותרת עמוד + משפט הסבר
+Grid רספונסיבי: 1 עמודה במובייל → 2 → 3 בדסקטופ
+כרטיס לבן לכל ספר: פינות מעוגלות, צל, hover קל
+תג genre בצבע indigo
+סיכום מוגבל ל-4 שורות (line-clamp)
+כפתור Delete עדין (אדום בהיר, לא בוהק)
+מצב "אין ספרים" — קופסה עם מסגרת מקווקוות
+Add Book
+שמרתי את אותו מבנה (inputs + 2 כפתורים, אותה לוגיקה)
+עטפתי בכרטיס לבן עם צל
+שדות עם מסגרת, צל ו-focus indigo
+כפתורים: indigo (Add Book) ו-emerald (Generate Summary)

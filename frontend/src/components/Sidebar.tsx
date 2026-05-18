@@ -1,13 +1,26 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+
 function Sidebar() {
-    return (
-        <div className="bg-gray-800 text-white min-h-screen w-64 p-4">
-            <h1 className="text-2xl font-bold">Sidebar</h1>
-            <Link to="/" className="block p-2 text-white hover:bg-gray-700 rounded-md my-2">All Books</Link>
-            <Link to="/add-book" className="block p-2 text-white hover:bg-gray-700 rounded-md my-2">Add Book</Link>
-            <Link to="/search-book" className="block p-2 text-white hover:bg-gray-700 rounded-md my-2">Search Book</Link>
-        </div>
-    )
+  return (
+    <aside className="sticky top-0 h-screen w-64 shrink-0 border-r border-slate-800 bg-slate-900 px-5 py-8 text-white shadow-xl">
+      <div className="mb-10 border-b border-slate-700 pb-6">
+        <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400">
+          Book Library
+        </p>
+        <h1 className="mt-1 text-2xl font-bold">My Shelf</h1>
+      </div>
+      <nav className="flex flex-col gap-1">
+        <NavLink to="/" end className="block rounded-lg px-4 py-2.5 text-sm font-medium tran    sition-all duration-200 text-slate-300 hover:bg-slate-700 hover:text-white">
+          All Books
+        </NavLink>
+        <NavLink to="/add-book" className="block rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-200 text-slate-300 hover:bg-slate-700 hover:text-white">
+          Add Book
+        </NavLink>
+       
+      </nav>
+    </aside>
+  );
 }
 
 export default Sidebar;

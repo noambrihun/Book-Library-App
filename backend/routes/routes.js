@@ -39,11 +39,11 @@ Router.delete("/:id", async (req, res) => {
 Router.post("/summarize", async (req, res) => {
     try{
     const {title, author, genre} = req.body;
-    const summary = await generateText({
+    const { text } = await generateText({
         model: openai("gpt-4o-mini"),
         prompt: `create a summary for the book ${title} by ${author} in the genre ${genre}.maximum 20 words.`
     });
-        res.status(200).json({summary});
+        res.status(200).json({ summary: text });
     }catch(e){
         res.status(500).json({message: "Error summarizing book", error: e.message});
     }
